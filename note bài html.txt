@@ -1,0 +1,12 @@
+Thẻ <span> được dùng để nhóm các phần tử nội tuyến lại với nhau, tiện cho việc định dạng CSS.
+
+- Thông thường:
+
+Các phần tử nội tuyến được nhóm bên trong phần tử <span> chủ yếu là văn bản.
+Các văn bản chủ yếu được định dạng:
+Kích cỡ chữ (font-size)
+Màu chữ (color)
+Màu nền (background-color)
+Kiểu chữ (font-style)
+Font chữ (font-family)
+Gạch chân (text-decoration)3
