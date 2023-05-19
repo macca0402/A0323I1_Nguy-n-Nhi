@@ -8,10 +8,10 @@
 
 <script>
     let array = [1, 21, 23, 44, 34, 654, 6, 5];
-
+    array=array.toString().split('');
     function displayArray() {
         for (let i = 0; i < array.length; i++) {
-            console.log(array[i]);
+            document.write(array[i]);
         }
     }
 
@@ -25,12 +25,12 @@
             i++;
             j--;
         }
-        //displayArray();
     }
 
-    console.log(displayArray());
-    console.log(daoMang());
-    console.log(displayArray());
+    displayArray();
+    daoMang();
+    document.writeln("<br>");
+    displayArray();
 
 </script>
 </body>
