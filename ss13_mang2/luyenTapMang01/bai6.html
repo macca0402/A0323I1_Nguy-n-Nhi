@@ -14,19 +14,24 @@ Bài 6- Viết chương trình khởi tạo/nhập
  in ra "V is in the array" còn lại in ra "V is not in the array".
 -->
 <script>
-    let n = +prompt("Nhap so luong : ");
-    let mang6 = new Array(n);
-    for (let i = 0; i < mang6.length; i++) {
-        mang6[i] = prompt("Nhap gia tri thu " + i + " : ");
-    }
-    let soNguyenV = +prompt("Nhap so nguyen V: ");
-    for (let i = 0; i < mang6.length; i++) {
-        if (mang6[i] == soNguyenV) {
-            document.writeln(soNguyenV + " is in the array\n" + '<br>')
+    let array = [1, 2, 3, 4, 5];
+    let V = +prompt("Nhap vao so V: ");
+
+    function timKiem() {
+        let timKiemV = false;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == V) {
+                timKiemV = true;
+            }
+        }
+        if (timKiemV == true) {
+            alert("V is in the array.")
         } else {
-            document.writeln(soNguyenV + "is not in the array\n" + '<br>');
+            alert("V is not in the array.")
         }
     }
+
+    alert(timKiem());
 
 </script>
 </body>
