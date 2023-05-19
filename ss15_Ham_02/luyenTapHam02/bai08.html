@@ -7,17 +7,11 @@
 <body>
 
 <script>
-    let array = new Array(4);
-
-    function inputArray() {
-        for (let i = 0; i < array.length; i++) {
-            array[i] = +prompt("Nhap gia tri thu " + i + ": ");
-        }
-    }
+    let array = [1, 21, 23, 44, 34, 654, 6, 5];
 
     function displayArray() {
         for (let i = 0; i < array.length; i++) {
-            document.write(array[i] + "&nbsp");
+            console.log(array[i]);
         }
     }
 
@@ -31,12 +25,12 @@
             i++;
             j--;
         }
-        displayArray();
+        //displayArray();
     }
 
-    alert(inputArray());
-    document.write("<br>" + displayArray());
-    alert(daoMang());
+    console.log(displayArray());
+    console.log(daoMang());
+    console.log(displayArray());
 
 </script>
 </body>
