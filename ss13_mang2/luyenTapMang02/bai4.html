@@ -9,17 +9,15 @@
 <script>
     let chuoiA = prompt("Nhap chuoi : ");
     chuoiA = chuoiA.toString();
-    let sum = 0, sum2 = 0;
-    console.log(chuoiA);
+    let sum = 0;
+    //console.log(chuoiA);
     for (let i = 0; i < chuoiA.length; i++) {
-        if (chuoiA[i] == ' ') {
+        if (chuoiA[i] == ' ' && chuoiA[i + 1] != ' ') {
             sum++;
-        } else if (chuoiA[i] != ' ') {
-            sum2++;
         }
     }
     sum++;
-    alert("Tong so cac tu: " + sum + "\nTong  so cac ky tu:  " + sum2);
+    alert("Tong so cac tu: " + sum);
 
 </script>
 

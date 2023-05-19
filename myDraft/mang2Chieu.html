@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let mangA = new Array(3);
+    for (let i = 0; i < mangA.length; i++) {
+        mangA[i] = new Array(2);
+        for (let j = 0; j < mangA[i].length; j++) {
+            mangA[i][j] = prompt("Nhap gia tri A[" + i + "]" + "[" + j + "]:");
+        }
+        document.write('<br>')
+    }
+    for (let i = 0; i < mangA.length; i++) {
+
+        for (let j = 0; j < mangA[i].length; j++) {
+            document.write(mangA[i][j] + "&nbsp&nbsp")
+        }
+        document.write('<br>')
+    }
+
+
+</script>
+
 </body>
 </html>

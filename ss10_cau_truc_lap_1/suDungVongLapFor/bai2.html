@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n;
+    do {
+        n = +prompt("Nhap n: ");
+    } while (n < 0);
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum = sum + i;
+    }
+    alert("Tong cac day so : " + sum);
+
+</script>
+
 </body>
 </html>

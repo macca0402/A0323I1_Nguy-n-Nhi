@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<script>
+    let array = new Array(4);
+
+    function inputArray() {
+        for (let i = 0; i < array.length; i++) {
+            array[i] = +prompt("Nhap gia tri thu " + i + ": ");
+        }
+    }
+
+    function displayArray() {
+        for (let i = 0; i < array.length; i++) {
+            document.write(array[i] + "&nbsp");
+        }
+    }
+
+    function daoMang() {
+        let i = 0;
+        let j = array.length - 1;
+        while (i < j) {
+            let tam = array[i];
+            array[i] = array[j];
+            array[j] = tam;
+            i++;
+            j--;
+        }
+        displayArray();
+    }
+
+    alert(inputArray());
+    document.write("<br>" + displayArray());
+    alert(daoMang());
+
+</script>
 </body>
 </html>

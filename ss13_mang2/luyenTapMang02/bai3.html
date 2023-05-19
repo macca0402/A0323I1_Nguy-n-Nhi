@@ -10,8 +10,15 @@ Bài 3: Viết một chương trình khai báo một mảng ký tự và kích t
 -->
 <body>
 <script>
-    let mang3 = new Array("!", "@", "gh", "f", "de", "d");
-    console.log(mang3.length);
+    let chuoi = prompt("Nhap chuoi: ");
+    chuoi = chuoi.split('');
+    let sum = 0;
+    for (let i = 0; i < chuoi.length; i++) {
+        if (!isNaN(chuoi[i]) && chuoi[i] != ' ') {
+            sum++;
+        }
+    }
+    alert("Tong so cac ky tu so trong mang la: " + sum + " ky tu .");
 </script>
 
 </body>

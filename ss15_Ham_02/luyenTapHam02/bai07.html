@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function doicho(a, b) {
+        let tmp = a;
+        a = b;
+        b = tmp;
+        alert(a + "," + b);
+    }
+
+    alert(doicho(4, 5));
+</script>
+
 </body>
 </html>
