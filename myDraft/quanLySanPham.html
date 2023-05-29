@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input  type="text"  id="nameProduct"  placeholder="Enter product  name ">
+<button onclick="add()">Add</button>
+<p id="soLuong"></p>
+<p  id="result"></p>
+
+<script>
+    let productList=['Sam sung','Nokia',"Iphone"];
+    display();
+    function add() {
+        let data=document.getElementById('nameProduct').value;
+        if(data!=""){
+            productList.push(data);
+        } else{
+            alert("Vui long nhap san pham.")
+        }
+        document.getElementById("nameProduct").value="";
+        display();
+    }
+    function edit1(index) {
+        let editName=prompt("Nhập tên sản phẩm: ",productList[index]);
+        productList[index]=editName;
+        display();
+    }
+    function delete1(index){
+        productList.splice(index,1);
+        display();
+    }
+    function display(){
+        let tableString='<table border="1">\n' +
+            '    <tr>\n' +
+            '        <td>STT</td>\n' +
+            '        <td>Name</td>\n' +
+            '        <td>Edit1</td>\n' +
+            '        <td>Edit2</td>\n' +
+            '        <td>Delete</td>\n' +
+            '    </tr>\n'
+        for(let i=0;i<productList.length;i++)
+        {
+            tableString +=      '    <tr>\n' +
+                '        <td>'+(i+1)+'</td>\n' +
+                '        <td>'+productList[i]+'</td>\n' +
+                '        <td><button onclick="edit1('+i+')">Edit1</button></td>\n' +
+                '        <td><button>Edit2</button></td>\n' +
+                '        <td><button onclick="delete1('+i+')">Delete</button></td>\n' +
+                '    </tr>\n'
+        }
+        tableString +='</table>';
+        document.getElementById("result").innerHTML=tableString;
+        document.getElementById("soLuong").innerHTML="So luong san pham la: "+productList.length;
+    }
+
+</script>
+</body>
+</html>

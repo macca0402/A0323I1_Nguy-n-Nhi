@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>Thêm mới học viên</button>
+<button>Sửa thông tin học viên</button>
+<button>Xóa học viên</button>
+<table>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+
+</body>
+<script>
+    let  studentList=["Nguyen Van A","Nguyen Van B","Nguyen Thi  C"];
+    let  classList=["C1022G1","C1022G2","C1022G4"];
+    let tableString='<table border="1">\n' +
+        '    <tr>\n' +
+        '        <th>Mã học viên</th>\n' +
+        '        <th>Tên</th>\n' +
+        '        <th>Lớp</th>\n' +
+        '        <th>Email</th>\n' +
+        '        <th>Ngày sinh</th>\n' +
+        '    </tr>'
+    for(let i=0;i<studentList.length;i++){
+        tableString +=
+            '    <tr>\n' +
+            '        <th>'+'HV_000'+'(+i+)'+'</th>\n' +
+            '        <th>'+studentList[i]+'</th>\n' +
+            '        <th>Lớp</th>\n' +
+            '        <th>Email</th>\n' +
+            '        <th>Ngày sinh</th>\n' +
+            '    </tr>'
+    }
+
+
+
+
+
+
+    tableString+='</table>\n'
+</script>
+</html>
