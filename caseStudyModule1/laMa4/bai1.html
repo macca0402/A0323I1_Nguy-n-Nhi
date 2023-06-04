@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let chuoi = prompt("Nhap chuoi: ");
+    chuoi=chuoi.split('');
+   // chuoi = chuoi.replace(/  +/g, ' ');
+    console.log(chuoi);
+    // let chuoi=prompt("Nhap chuoi: ");
+    // chuoi=chuoi.split('');
+    // console.log(chuoi);
+
+    for(let i=0;i<chuoi.length;i++){
+        if(chuoi[i]==' '&&chuoi[i+1]==' '){
+           xoa(chuoi,i+1);
+        }
+    }
+    function xoa(chuoi,vt) {
+        for(let i=vt;i<chuoi.length;i++){
+            chuoi[i]=chuoi[i+1];
+            chuoi.length--;
+        }
+    }
+
+    console.log(chuoi);
+</script>
+
 </body>
 </html>
